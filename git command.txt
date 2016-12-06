@@ -1,0 +1,60 @@
+Clone repository
+git clone <git_url> <new_name_for folder> 
+[NOTE: If new_name_for_folder not provided name of git will be the folder name]
+EG: git clone ssh://git@stash.benevity.org:7999/GT/servus.git Servus
+
+
+Create new repository base
+git init
+    [It creates git setup to the new folder or project]
+git add .
+    [NOTE: To add all new files]
+git commit -am “<message>”
+    [NOTE: Best practice for message is to have format of ‘Issue no: summary of changes’]
+git push origin master
+    [NOTE: master is branch_name so might differ but generally it’s set as master]
+
+
+Commit changes to repository
+git status
+git add <file_name>
+    [NOTE: To add individual files only]
+git add .
+    [NOTE: To add all new files]
+git commit -m “<message>” <file_name>
+    [NOTE: To commit with specific files, if not file change only file add or delete then no need to specify file_name]
+git commit -am “<message>” 
+    [NOTE: To commit with all changed files (not preferred)]
+git pull origin <branch_name> [branch_name is usually master]
+    [NOTE: If merged or conflict then please fix conflict follow steps from beginning]
+git push origin <branch_name> [branch_name is usually master]
+
+
+Create branching
+git checkout -b “<branch_name>”
+git status
+git add <filename>
+git commit -m “<message>”
+git push -u origin <branch_name> [NOTE: for the first time only]
+git pull origin <branch_name>
+git push origin <branch_name>
+
+
+Switch between branches
+git checkout “<branch_name>”
+
+
+Remove the changes done
+git checkout . [NOTE: to revert to last commit]
+git checkout <commit_number> [NOTE: to revert to some old revision]
+
+
+Merge branches or commits
+git merge <commit_number> 
+
+
+Delete branch
+git branch -d origin/<branch_name> [NOTE: to delete remote branch]
+git branch -D <branch_name> [NOTE: to delete local branch]
+
+
